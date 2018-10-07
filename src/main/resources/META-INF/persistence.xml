@@ -1,0 +1,19 @@
+<persistence xmlns="http://java.sun.com/xml/ns/persistence" version="1.0">
+    <!--一个持久化单元,可以有多个-->
+    <persistence-unit name="jpa" transaction-type="RESOURCE_LOCAL">
+
+        <properties>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5Dialect"/>
+            <!--设置方言-->
+            <property name="hibernate.connection.driver_class" value="org.gjt.mm.mysql.Driver"/>
+            <property name="hibernate.connection.username" value="root"/>
+            <property name="hibernate.connection.password" value="1234"/>
+            <property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/jpa?useUnicode=true&amp;charsetEncoding=UTF-8"/>
+            <!--连接参数-->
+            <property name="hibernate.max_fetch_depth" value="3"/>
+            <property name="hibernate.hbm2ddl.auto" value="update"/>
+            <!--没有表创建表-->
+        </properties>
+    </persistence-unit>
+
+</persistence>
